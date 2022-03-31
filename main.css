@@ -37,14 +37,13 @@ input{
     display: none;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.85);
     position: fixed;
     z-index: 100;
     opacity: 0;
     transition: 1s;
     padding-top: 100px;
-    overflow: sc;
-
+    overflow: scroll;
 }
 
 .nav-menu ul{
@@ -68,13 +67,13 @@ input{
 }
 
 .nav-menu > .container > ul > li > ul > li > a{
-    border-top: 1px solid #fff;
+    border-top: 0.4px solid #fff;
     padding-left: 5px;
     padding-right: 5px;
 }
 
 .nav-menu > .container > ul > li > a{
-    border-top: 3px solid #ffffff;
+    border-top: 2px solid #ffffff;
 }
 
 .nav-menu-active{
@@ -166,10 +165,6 @@ header h1 a{
     color: #fff;
 }
 
-header h1 a:hover{
-    color: #fff;
-}
-
 header ul{
     margin: 0;
     padding: 0;
@@ -188,14 +183,8 @@ header ul li a{
     font-size: 1.2rem;
     text-decoration: none;
     color: #fff;
-    padding: 21px;
+    padding: 20.5px;
     max-height: 100%;
-}
-
-header ul li a:hover{
-    background: #006669;
-    transition: 0.5s;
-    color: #ffffff;
 }
 
 header ul li ul{
@@ -207,10 +196,6 @@ header ul li ul{
     z-index: 99;
 }
 
-header ul li:hover ul{
-    display: block;
-}
-
 header ul li ul li{
     width: 100%;
 }
@@ -219,10 +204,6 @@ header ul li ul li a{
     padding: 10px;
     background: #fff;
     color: #008489;
-}
-
-.logo-link:hover{
-    text-decoration: none;
 }
 
 /* Slider */
@@ -268,10 +249,6 @@ header ul li ul li a{
     vertical-align: middle;
 }
 
-.carousel-caption h5 a:hover{
-    text-decoration: underline;
-}
-
 .carousel-caption-hack{
     position: absolute;
     right: 0;
@@ -311,11 +288,6 @@ header ul li ul li a{
     border-radius: 3px;
 }
 
-.main-content .post-text h3 a:hover{
-    text-decoration: underline;
-    color: #5c5b5b;
-}
-
 .main-content .post-text h3 a{
     color: #5c5b5b;
 }
@@ -332,6 +304,10 @@ header ul li ul li a{
 
 .search{
     margin-top: 96px;
+}
+
+.topics, .search{
+    overflow: hidden;
 }
 
 .sidebar .section{
@@ -357,11 +333,6 @@ header ul li ul li a{
     font-weight: 500;
     color: #5c5b5b;
     font-size: 1.2em;
-}
-
-.sidebar .topics ul li a:hover{
-    padding-left: 10px;
-    transition: all 0.3s;
 }
 
 /* Footer */
@@ -400,12 +371,6 @@ header ul li ul li a{
     color: #ffffff;
 }
 
-.footer .about .socials a:hover{
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    transition: all .3s;
-}
-
 .footer .contact .socials i{
     color: #ffffff;
     margin-right: 7px;
@@ -424,12 +389,6 @@ header ul li ul li a{
     transition: all .3s;
     color: #ffffff;
     text-decoration: none;
-}
-
-.footer .links ul a:hover{
-    color: #ffffff;
-    margin-left: 15px;
-    transition: all .3s;
 }
 
 .footer .contact-form .contact-input{
@@ -464,14 +423,6 @@ header ul li ul li a{
     box-shadow: 0 0 5px #303036;
 }
 
-.footer .contact-form .contact-btn:hover{
-    background: #272727;
-    color: #ffffff;
-    border: 3px solid #272727;
-    text-shadow: 0 0 10px #ffffff;
-    box-shadow: 0 0 15px #272727;
-}
-
 .footer input, .footer textarea{
     border-radius: 10px;
 }
@@ -494,15 +445,23 @@ header ul li ul li a{
     padding-bottom: 10px;
 }
 
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1 1 auto;
+}
+
 /* Single post */
 
 .single_post{
     margin-bottom: 30px;
-}
-
-.content p:hover, .content h1:hover, .content h2:hover, .content h3:hover,
-.content h4:hover, .content h5:hover, .content h6:hover, .content span, .content div{
-    cursor: default;
 }
 
 .single_post .info{
@@ -517,11 +476,6 @@ header ul li ul li a{
 .single_post a{
     text-decoration: underline;
     color: #686868;
-}
-
-.single_post a:hover{
-    text-decoration: none;
-    color: #008489;
 }
 
 /* about us */
@@ -552,6 +506,40 @@ header ul li ul li a{
 
 .content ul li{
     padding: 5px 0;
+}
+
+/* registration */
+
+.reg-form{
+    padding: 50px 0;
+}
+
+.reg-form h2{
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.reg-form a{
+    display: block;
+    font-size: 1.2em;
+    transition: all .3s;
+    text-decoration: none;
+    color: #5c5b5b;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.reg-form button{
+    width: 100%;
+    padding: 6px 0;
+    margin-top: 20px;
+    font-size: 19px;
+}
+
+.reg-form-input{
+    height: 3.3rem;
 }
 
 /* Adpative */
@@ -689,3 +677,73 @@ header ul li ul li a{
     }
 }
 
+/* Hover */
+
+@media screen and (min-width: 768px){
+    header h1 a:hover{
+        color: #fff;
+    }
+
+    .single_post a:hover{
+        text-decoration: none;
+        color: #008489;
+    }
+
+    .content p:hover, .content h1:hover, .content h2:hover, .content h3:hover,
+    .content h4:hover, .content h5:hover, .content h6:hover, .content span, .content div{
+        cursor: default;
+    }
+
+    .footer .contact-form .contact-btn:hover{
+        background: #272727;
+        color: #ffffff;
+        border: 3px solid #272727;
+        text-shadow: 0 0 10px #ffffff;
+        box-shadow: 0 0 15px #272727;
+    }
+    
+    .footer .links ul a:hover{
+        color: #ffffff;
+        margin-left: 15px;
+        transition: all .3s;
+    }
+
+    .footer .about .socials a:hover{
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        transition: all .3s;
+    }
+
+    .sidebar .topics ul li a:hover{
+        padding-left: 10px;
+        transition: all 0.3s;
+    }
+
+    .main-content .post-text h3 a:hover{
+        text-decoration: underline;
+        color: #5c5b5b;
+    }
+
+    .carousel-caption h5 a:hover{
+        text-decoration: underline;
+    }
+
+    .logo-link:hover{
+        text-decoration: none;
+    }
+
+    header ul li a:hover{
+        background: #006669;
+        transition: 0.5s;
+        color: #ffffff;
+    }
+
+    header ul li:hover ul{
+        display: block;
+    }
+
+    .reg-form a:hover{
+        margin-left: -5px;
+        transition: all .3s;
+    }
+}
